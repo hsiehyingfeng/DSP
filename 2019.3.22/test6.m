@@ -1,0 +1,10 @@
+W=[-300:300]*pi/300;
+H=0.19*ones(size(W))./(1.81-1.8*cos(W));
+magH=abs(H);
+phaH=angle(H)*180/pi;
+subplot(2,1,1); 
+plot(W/pi,magH,'LineWidth',1.5);
+axis([-1 1 0 20]);
+subplot(2,1,2); 
+plot(W/pi,phaH,'LineWidth',1.5);
+axis([-1 1 -180 180]);
