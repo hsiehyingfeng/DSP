@@ -1,0 +1,10 @@
+w1=linspace(0,pi,501);
+X1=8*exp(j*2*w1)./(1-0.5*exp(-j*w1));
+magX1=abs(X1);
+phaX1=angle(X1);
+subplot(2,1,1); 
+plot(w1/pi,magX1,'LineWidth',1.5);
+axis([0 1 0 20]);
+subplot(2,1,2); 
+plot(w1/pi,phaX1*180/pi,'LineWidth',1.5);
+axis([0 1 -200 200]);
